@@ -119,6 +119,9 @@ public class DesadvLineSSCC18Generator
 				}
 			}
 			// Generate a new SSCC record
+			/* 
+			We can't create a EDI_DesadvLine_Packs on the fly like this, because they will also be created when the shipment (M_InOut) is created.
+			And then we would have duplicate EDI_DesadvLine_Packs
 			else
 			{
 				final I_EDI_DesadvLine desadvLine = desadvLineLabels.getEDI_DesadvLine();
@@ -129,6 +132,7 @@ public class DesadvLineSSCC18Generator
 				final I_EDI_DesadvLine_Pack desadvLineSSCC = generateDesadvLineSSCC(desadvLine, luQtys);
 				enqueueToPrint(desadvLineSSCC);
 			}
+			*/
 		}
 	}
 
